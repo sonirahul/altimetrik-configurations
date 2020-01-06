@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry-app:8761/eureka/
+
+spring:
+  cloud:
+    config:
+      uri: http://registry-app:8761/config
+  boot:
+    admin:
+      client:
+        url: http://registry-app:8761/admin
+
+altimetrik:
+  jwt:
+    secret: NjBlZTZmNjVhYTRlMTdiNzM3NGIwNDFhOTRlYmUxNWYxMzEyNDFkZTU5ZjI0ZmQ4MGE3ZDU2ZTY5NjE5YTk1ZmQzNDc2OGQ1Yjc5ZTI4MzMzMTk4N2ExMTVjN2NiMTZlMmNkOQ
+    validityInSeconds: 600
