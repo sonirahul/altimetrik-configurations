@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:admin@registry-app:8761/eureka/
+      defaultZone: http://admin:admin@registry-app:8761/eureka
 
 spring:
   cloud:
@@ -25,3 +25,4 @@ logging:
   level:
     ROOT: info
     com.sapient.authserver: debug
+    com.sapient.registry: debug
