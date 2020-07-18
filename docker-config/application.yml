@@ -1,16 +1,20 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://registry-app:8761/eureka/
+      defaultZone: http://admin:admin@registry-app:8761/eureka/
 
 spring:
   cloud:
     config:
       uri: http://registry-app:8761/config
+      username: admin
+      password: admin
   boot:
     admin:
       client:
         url: http://registry-app:8761/admin
+        username: admin
+        password: admin
 
 sapient:
   jwt:
