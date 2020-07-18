@@ -20,9 +20,15 @@ sapient:
   jwt:
     secret: NjBlZTZmNjVhYTRlMTdiNzM3NGIwNDFhOTRlYmUxNWYxMzEyNDFkZTU5ZjI0ZmQ4MGE3ZDU2ZTY5NjE5YTk1ZmQzNDc2OGQ1Yjc5ZTI4MzMzMTk4N2ExMTVjN2NiMTZlMmNkOQ
     validityInSeconds: 600
+  client-id: internal
+  client-secret: internal
+  grant-type: client_credentials
+  access-token-uri: http://authserver-app:8080/oauth/token
     
 logging:
   level:
     ROOT: info
     com.sapient.authserver: debug
     com.sapient.registry: debug
+
+
