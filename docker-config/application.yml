@@ -20,3 +20,8 @@ sapient:
   jwt:
     secret: NjBlZTZmNjVhYTRlMTdiNzM3NGIwNDFhOTRlYmUxNWYxMzEyNDFkZTU5ZjI0ZmQ4MGE3ZDU2ZTY5NjE5YTk1ZmQzNDc2OGQ1Yjc5ZTI4MzMzMTk4N2ExMTVjN2NiMTZlMmNkOQ
     validityInSeconds: 600
+    
+logging:
+  level:
+    ROOT: info
+    com.sapient.authserver: debug
