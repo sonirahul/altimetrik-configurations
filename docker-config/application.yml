@@ -15,20 +15,33 @@ spring:
         url: http://registry-app:8761/admin
         username: admin
         password: admin
+        instance:
+          service-base-url: http://authserver-app:8080
 
 sapient:
-  jwt:
-    secret: NjBlZTZmNjVhYTRlMTdiNzM3NGIwNDFhOTRlYmUxNWYxMzEyNDFkZTU5ZjI0ZmQ4MGE3ZDU2ZTY5NjE5YTk1ZmQzNDc2OGQ1Yjc5ZTI4MzMzMTk4N2ExMTVjN2NiMTZlMmNkOQ
-    validityInSeconds: 600
   client-id: internal
   client-secret: internal
   grant-type: client_credentials
   access-token-uri: http://authserver-app:8080/oauth/token
+  jwt:
+    secret: NjBlZTZmNjVhYTRlMTdiNzM3NGIwNDFhOTRlYmUxNWYxMzEyNDFkZTU5ZjI0ZmQ4MGE3ZDU2ZTY5NjE5YTk1ZmQzNDc2OGQ1Yjc5ZTI4MzMzMTk4N2ExMTVjN2NiMTZlMmNkOQ
+    validityInSeconds: 600
     
 logging:
   level:
     ROOT: info
     com.sapient.authserver: debug
     com.sapient.registry: debug
+    
+security:
+  oauth2:
+    client:
+      grant-type: client_credentials
+      scope: web-app
+      access-token-uri: http://authserver-app:8080/oauth/token
+      client-id: internal
+      client-secret: internal
+      authorized-grant-types: client_credentials
+      client-authentication-scheme: header
 
 
