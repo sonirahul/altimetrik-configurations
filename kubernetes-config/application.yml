@@ -1,5 +1,7 @@
 eureka:
   client:
+    registerWithEureka: false
+    fetchRegistry: false
     service-url:
       defaultZone: http://admin:admin@registry-app:8761/eureka
 
