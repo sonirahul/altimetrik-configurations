@@ -1,28 +1,28 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://admin:admin@registry-app.default.svc.cluster.local:8761/eureka
+      defaultZone: http://admin:admin@registry-app:8761/eureka
 
 spring:
   cloud:
     config:
-      uri: http://registry-app.default.svc.cluster.local:8761/config
+      uri: http://registry-app:8761/config
       username: admin
       password: admin
   boot:
     admin:
       client:
-        url: http://registry-app.default.svc.cluster.local:8761/admin
+        url: http://registry-app:8761/admin
         username: admin
         password: admin
         instance:
-          service-base-url: http://authserver-app.default.svc.cluster.local:8080
+          service-base-url: http://authserver-app:8080
 
 sapient:
   client-id: internal
   client-secret: internal
   grant-type: client_credentials
-  access-token-uri: http://authserver-app.default.svc.cluster.local:8080/oauth/token
+  access-token-uri: http://authserver-app:8080/oauth/token
   jwt:
     secret: NjBlZTZmNjVhYTRlMTdiNzM3NGIwNDFhOTRlYmUxNWYxMzEyNDFkZTU5ZjI0ZmQ4MGE3ZDU2ZTY5NjE5YTk1ZmQzNDc2OGQ1Yjc5ZTI4MzMzMTk4N2ExMTVjN2NiMTZlMmNkOQ
     validityInSeconds: 600
@@ -38,7 +38,7 @@ security:
     client:
       grant-type: client_credentials
       scope: web-app
-      access-token-uri: http://authserver-app.default.svc.cluster.local:8080/oauth/token
+      access-token-uri: http://authserver-app:8080/oauth/token
       client-id: internal
       client-secret: internal
       authorized-grant-types: client_credentials
